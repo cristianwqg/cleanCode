@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.PDF" Version="24.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pronabec.Infrastructure\Pronabec.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pronabec.Persistence\Pronabec.Persistence.csproj" />
+    <ProjectReference Include="..\Pronabec.UseCases\Pronabec.UseCases.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Modules\Policies\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\..\..\..\..\dataCristian\aspose\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.PDF">
+      <HintPath>..\..\..\..\..\..\..\dataCristian\aspose\Aspose.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\..\..\..\..\dataCristian\aspose\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\..\..\OneDrive - PROGRAMA NACIONAL DE BECAS Y CREDITO EDUCATIVO\Escritorio\RestSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
