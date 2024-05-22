@@ -1,4 +1,5 @@
 ﻿using Pronabec.Dto.Enums;
+using System;
 
 namespace Pronabec.Dto
 {

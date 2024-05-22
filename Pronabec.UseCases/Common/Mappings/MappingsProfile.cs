@@ -25,10 +25,10 @@ namespace Pronabec.UseCases.Common.Mappings
             CreateMap<Institucion, UpdateInstitucionCommand>().ReverseMap();
             CreateMap<Institucion, InstitucionCreatedEvent>().ReverseMap();
 
-            CreateMap<Compromiso, CompromisoDto>().ReverseMap();
-            CreateMap<Compromiso, CreateCompromisoCommand>().ReverseMap();
-            CreateMap<Compromiso, UpdateCompromisoCommand>().ReverseMap();
-            CreateMap<Compromiso, CompromisoCreatedEvent>().ReverseMap();
+            CreateMap<Domain.Entities.Compromiso, CompromisoDto>().ReverseMap();
+            CreateMap<Domain.Entities.Compromiso, CreateCompromisoCommand>().ReverseMap();
+            CreateMap<Domain.Entities.Compromiso, UpdateCompromisoCommand>().ReverseMap();
+            CreateMap<Domain.Entities.Compromiso, CompromisoCreatedEvent>().ReverseMap();
         }
     }
 }

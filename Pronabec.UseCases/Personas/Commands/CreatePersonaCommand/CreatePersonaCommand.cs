@@ -2,6 +2,7 @@
 using Pronabec.Dto;
 using Pronabec.Dto.Enums;
 using Pronabec.UseCases.Common.Bases;
+using System;
 
 namespace Pronabec.UseCases.Personas.Commands.CreatePersonaCommand
 {    

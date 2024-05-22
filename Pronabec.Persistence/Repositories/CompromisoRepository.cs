@@ -3,8 +3,12 @@ using Microsoft.Extensions.Caching.Distributed;
 using Pronabec.Domain.Entities;
 using Pronabec.Interface.Persistence;
 using Pronabec.Persistence.Context;
+using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
+
+using System;
 
 namespace Pronabec.Persistence.Repositories
 {
@@ -82,7 +86,7 @@ namespace Pronabec.Persistence.Repositories
             using var connection = _applicationContext.CreateConnection();
             var query = "sp_sel_compromiso_all";  
 
-            var compromiso = await connection.QueryAsync<Compromiso>(query, commandType: System.Data.CommandType.StoredProcedure);
+            var compromisos = await connection.QueryAsync<Compromiso>(query, commandType: System.Data.CommandType.StoredProcedure);
 
             var serializedCompromisos = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(compromisos));
             var options = new DistributedCacheEntryOptions()
@@ -91,7 +95,7 @@ namespace Pronabec.Persistence.Repositories
 
             await _distributedCache.SetAsync(cacheKey, serializedCompromisos, options);
 
-            return compromiso;
+            return compromisos;
         }
     }
 }

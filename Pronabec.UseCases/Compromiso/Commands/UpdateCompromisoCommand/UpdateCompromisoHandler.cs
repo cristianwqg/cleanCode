@@ -3,6 +3,9 @@ using MediatR;
 using Pronabec.Domain.Entities;
 using Pronabec.Dto;
 using Pronabec.Interface.Persistence;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Pronabec.UseCases.Compromiso.Commands.UpdateCompromisoCommand
 {
@@ -21,7 +24,7 @@ namespace Pronabec.UseCases.Compromiso.Commands.UpdateCompromisoCommand
         {
             try
             {
-                var compromiso = _mapper.Map<Compromiso>(request);
+                var compromiso = _mapper.Map<Domain.Entities.Compromiso>(request);
                 _unitOfWork.Compromiso.Update(compromiso);
 
                 compromiso = await _unitOfWork.Compromiso.Get(request.Id);

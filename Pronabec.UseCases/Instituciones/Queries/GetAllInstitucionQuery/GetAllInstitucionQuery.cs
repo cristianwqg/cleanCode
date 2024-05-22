@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Pronabec.Dto;
 using Pronabec.UseCases.Common.Bases;
+using System.Collections.Generic;
 
 namespace Pronabec.UseCases.Instituciones.Queries.GetAllInstitucionQuery
 {

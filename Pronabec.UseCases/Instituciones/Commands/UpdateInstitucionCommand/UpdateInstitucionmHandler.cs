@@ -3,6 +3,9 @@ using MediatR;
 using Pronabec.Domain.Entities;
 using Pronabec.Dto;
 using Pronabec.Interface.Persistence;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Pronabec.UseCases.Instituciones.Commands.UpdateInstitucionCommand
 {

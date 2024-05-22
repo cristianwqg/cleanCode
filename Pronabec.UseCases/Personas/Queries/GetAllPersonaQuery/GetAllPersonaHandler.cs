@@ -3,6 +3,10 @@ using MediatR;
 using Pronabec.Dto;
 using Pronabec.UseCases.Common.Bases;
 using Pronabec.Interface.Persistence;
+using System.Threading;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
 
 namespace Pronabec.UseCases.Personas.Queries.GetAllPersonaQuery
 {

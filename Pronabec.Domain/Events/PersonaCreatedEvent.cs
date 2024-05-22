@@ -1,4 +1,5 @@
 ﻿using Pronabec.Domain.Enums;
+using System;
 
 namespace Pronabec.Domain.Events
 {

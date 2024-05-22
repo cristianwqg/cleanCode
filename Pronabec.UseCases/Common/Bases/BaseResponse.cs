@@ -1,4 +1,6 @@
-﻿namespace Pronabec.UseCases.Common.Bases
+﻿using System.Collections.Generic;
+
+namespace Pronabec.UseCases.Common.Bases
 {
     public class BaseResponse<T>
     {

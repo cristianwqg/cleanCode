@@ -3,8 +3,11 @@ using Microsoft.Extensions.Caching.Distributed;
 using Pronabec.Domain.Entities;
 using Pronabec.Interface.Persistence;
 using Pronabec.Persistence.Context;
+using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Pronabec.Persistence.Repositories
 {

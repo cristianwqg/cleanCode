@@ -1,4 +1,6 @@
 ﻿using Pronabec.UseCases.Common.Bases;
+using System;
+using System.Collections.Generic;
 
 namespace Pronabec.UseCases.Common.Exceptions
 {

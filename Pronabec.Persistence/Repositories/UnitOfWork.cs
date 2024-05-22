@@ -1,4 +1,5 @@
 ﻿using Pronabec.Interface.Persistence;
+using System;
 
 namespace Pronabec.Persistence.Repositories
 {

@@ -1,4 +1,6 @@
-﻿namespace Pronabec.Interface.Persistence
+﻿using System;
+
+namespace Pronabec.Interface.Persistence
 {
     public interface IUnitOfWork : IDisposable
     {

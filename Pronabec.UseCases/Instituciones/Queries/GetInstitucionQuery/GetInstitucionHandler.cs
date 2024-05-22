@@ -3,6 +3,9 @@ using MediatR;
 using Pronabec.Dto;
 using Pronabec.Interface.Persistence;
 using Pronabec.UseCases.Common.Bases;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Pronabec.UseCases.Instituciones.Queries.GetInstitucionQuery
 {

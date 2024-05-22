@@ -7,6 +7,9 @@ using Pronabec.Dto;
 using Pronabec.Interface.Infrastructure;
 using Pronabec.Interface.Persistence;
 using Pronabec.UseCases.Common.Bases;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Pronabec.UseCases.Compromiso.Commands.CreateCompromisoCommand
 {
@@ -28,7 +31,7 @@ namespace Pronabec.UseCases.Compromiso.Commands.CreateCompromisoCommand
             var response = new BaseResponse<CompromisoDto>();
             try
             {
-                var compromiso = _mapper.Map<Compromiso>(request);
+                var compromiso = _mapper.Map<Domain.Entities.Compromiso>(request);
                 _unitOfWork.Compromiso.Create(compromiso);
 
                 compromiso = await _unitOfWork.Compromiso.Get(compromiso.Id);

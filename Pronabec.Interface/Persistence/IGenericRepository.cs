@@ -1,4 +1,7 @@
-﻿namespace Pronabec.Interface.Persistence
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Pronabec.Interface.Persistence
 {
     public interface IGenericRepository<T> where T : class
     {

@@ -3,6 +3,10 @@ using MediatR;
 using Pronabec.Dto;
 using Pronabec.UseCases.Common.Bases;
 using Pronabec.Interface.Persistence;
+using System.Threading;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
 
 namespace Pronabec.UseCases.Compromiso.Queries.GetAllCompromisoQuery
 {
@@ -24,7 +28,7 @@ namespace Pronabec.UseCases.Compromiso.Queries.GetAllCompromisoQuery
             try
             {
                 var compromiso = await _unitOfWork.Compromiso.GetAll();
-                var compromisoDto = _mapper.Map<IEnumerable<compromisoDto>>(compromiso);
+                var compromisoDto = _mapper.Map<IEnumerable<CompromisoDto>>(compromiso);
                 response.Data = compromisoDto;
 
                 if (response.Data is not null)
